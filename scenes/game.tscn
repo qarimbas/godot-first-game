@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://c66f2tiagg1sr"]
+[gd_scene load_steps=15 format=3 uid="uid://c66f2tiagg1sr"]
 
+[ext_resource type="Script" uid="uid://bd0bxlq84buib" path="res://scripts/game_manager.gd" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://b3hjlgmu1lcvb" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://dtdncmd6dus80" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dqa01xdajdmpt" path="res://scenes/platform.tscn" id="3_lnu2h"]
@@ -214,6 +215,10 @@ _data = {
 
 [node name="Game" type="Node2D"]
 
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_gee14")
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_lbhrr")
 format = 2
@@ -317,7 +322,9 @@ position = Vector2(31, -147)
 [node name="Slime" parent="." instance=ExtResource("6_p57ef")]
 position = Vector2(443, -45)
 
-[node name="Label" type="Label" parent="."]
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
 offset_left = -147.0
 offset_top = 6.0
 offset_right = -56.0
