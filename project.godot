@@ -11,9 +11,12 @@ config_version=5
 [application]
 
 config/name="First Game"
-run/main_scene="uid://c66f2tiagg1sr"
+run/main_scene="uid://bb3u7mm35n1ae"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout=""
 
 [autoload]
 
