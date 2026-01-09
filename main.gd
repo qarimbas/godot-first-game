@@ -21,6 +21,8 @@ func _input(event: InputEvent) -> void:
 
 """
 
+
+"""
 var health = 100
 
 func _input(event: InputEvent) -> void:
@@ -35,3 +37,6 @@ func _input(event: InputEvent) -> void:
 			print("Youre injured")
 		else:
 			print("Youre not dead yet")
+"""
+
+	
